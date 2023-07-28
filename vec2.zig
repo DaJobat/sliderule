@@ -41,8 +41,8 @@ fn FloatExtension(comptime Self: type) type {
     return struct {
         pub inline fn rand(r: std.rand.Random) Self {
             return .{
-                .x = r.float(Self.NumberType) * math.floatMax(Self.NumberType),
-                .y = r.float(Self.NumberType) * math.floatMax(Self.NumberType),
+                .x = r.float(Self.NumberType),
+                .y = r.float(Self.NumberType),
             };
         }
 
