@@ -79,7 +79,7 @@ fn FloatExtension(comptime Self: type) type {
 }
 
 fn Vector2Base(comptime Number: type, comptime Extension: fn (type) type) type {
-    return struct {
+    return extern struct {
         const Vector2 = @This();
         pub usingnamespace Extension(Vector2);
         pub const NumberType = Number;
